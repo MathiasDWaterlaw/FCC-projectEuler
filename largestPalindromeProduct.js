@@ -14,7 +14,17 @@ function largestPalindromeProduct(n) {
         }
     }
 
-    return console.log(palindromes);
+    let largestPalindrome = palindromes[0];
+
+    for ( let i = 1; i < palindromes.length; i++ ) {      
+        if ( palindromes[i] > largestPalindrome ) {
+
+            largestPalindrome = palindromes[i];
+        }
+    }
+    
+    return largestPalindrome;
   }
   
+  largestPalindromeProduct(2);
   largestPalindromeProduct(3);
